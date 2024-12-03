@@ -19,20 +19,19 @@ body {
 
 .container {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   gap: 20px;
-  padding: 20px;
   width: 100%;
-  max-width: 600px;
+  max-width: 400px; /* Dimensiunea maximă pe desktop */
 }
 
 .zone {
   background-color: #333;
   border-radius: 8px;
   padding: 20px;
-  width: 50%;
   text-align: center;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  width: 70%; /* Lățime completă */
 }
 
 .zone h2 {
@@ -43,18 +42,18 @@ body {
 .controls {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-between; /* Aliniere pe același rând */
   gap: 10px;
 }
 
 .controls input[type="text"] {
-  width: 60px; /* Dimensiune mică pentru minute */
+  width: 60px; /* Dimensiune mică pentru input */
   padding: 6px;
   border-radius: 4px;
   border: 1px solid #555;
   background-color: #444;
   color: #fff;
-  text-align: center; /* Aliniere centrală pentru numere */
+  text-align: center;
 }
 
 .controls button {
@@ -116,12 +115,22 @@ input:checked + .slider:before {
 
 /* Responsive design */
 @media (max-width: 768px) {
-  .zone {
-    max-width: 100%;
+  body {
+    justify-content: center;
+    align-items: center;
+  }
+
+  .container {
+    max-width: 400px; /* Păstrează dimensiunea maximă ca pe desktop */
+    text-align: center;
+    display: flex;
+    flex-direction: column; /* Zonele sunt una sub alta */
+    align-items: center; /* Centrează zonele pe mijlocul ecranului */
   }
 
   .controls {
-    flex-direction: column;
-    gap: 5px;
+    flex-direction: row; /* Elemente pe același rând */
+    justify-content: space-between; /* Aliniere uniformă între input, buton și switch */
+    gap: 10px; /* Spațiu între elemente */
   }
 }
