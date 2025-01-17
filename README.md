@@ -15,7 +15,7 @@ This repository contains a **simple irrigation system interface** developed usin
 
 ## Deployment
 
-You can view the live project here: [Sistem de Irigație Demo](#) *(Add the deployment URL if available).*
+You can view the live project here: [Irrigation System](https://orasanuana.github.io/Irrigation_System/).
 
 ## How to Use
 
